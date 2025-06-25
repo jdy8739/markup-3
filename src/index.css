@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: Atkinson;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../public/fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
+}
+
+@layer utilities {
+    .clip-custom {
+        clip-path: polygon(
+            0 0,         /* 왼쪽 위 */
+            calc(100% - 20px) 0,  /* 오른쪽 위에서 왼쪽으로 20px → 사선 시작 */
+            100% 20px,   /* 사선 아래로 20px 내려감 */
+            100% 100%,   /* 오른쪽 아래 */
+            20px 100%,   /* 왼쪽 아래에서 오른쪽으로 20px 들어감 → 사선 시작 */
+            0 calc(100% - 20px)  /* 사선 위로 20px 올라감 */
+        );    
+    }
+}
+
 @theme {
     --breakpoint-lg: 90rem;
+    --font-atkinson: "Atkinson", "Open Sans";
 }
