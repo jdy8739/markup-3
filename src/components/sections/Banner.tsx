@@ -5,7 +5,7 @@ import minicar from '@assets/images/mini-car.png';
 const Banner = () => {
   return (
     <section className="flex flex-col gap-[3.75rem] bg-[#F2F4F9] pt-[9.25rem]">
-      <div className="px-[2rem] flex flex-col gap-[6.25rem]">
+      <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem]">
         <div className="flex flex-col gap-[3.75rem]">
           <div className="text-center flex flex-col gap-[1rem]">
             <p className="text-[1.38rem] text-[#FA1D1D] leading-[1.5] tracking-[0.16em]">PLAN YOUR TRIP NOW</p>
@@ -27,7 +27,7 @@ const Banner = () => {
             <div className="text-[#FA1D1D] font-atkinson text-[1.50rem] leading-[1.21]">WHAT'S NEW</div>
             <div className="h-[2px] flex-1 border-b-2 border-[#FA1D1D] border-dashed" />
           </div>
-          <p className="text-[1rem] leading-[1.5] text-[#5B6B7A]">
+          <p className="text-[1.13rem] leading-[1.5] text-[#5B6B7A]">
             Now You Can Rent A Car With The Various Facilities And Conveniences We Provide.
           </p>
         </div>
@@ -60,23 +60,25 @@ const Banner = () => {
           grid-rows-2
           gap-[3.75rem]
           text-center
+          md:gap-[3.75rem_9.00rem]
+          md:px-[9rem]
           "
         >
           <div className="flex flex-col justify-between">
-            <dt>CAR RENTED</dt>
-            <dd className="font-atkinson text-[3.25rem]">240</dd>
+            <dt className="md:text-[1.13rem]">CAR RENTED</dt>
+            <dd className="font-atkinson text-[3.25rem] md:text-[4.38rem] md:leading-[1.1]">240</dd>
           </div>
           <div className="text-[#FF9D29]">
-            <dt>SATISFIED CLIENTS</dt>
-            <dd className="font-atkinson text-[3.25rem]">235</dd>
+            <dt className="md:text-[1.13rem]">SATISFIED CLIENTS</dt>
+            <dd className="font-atkinson text-[3.25rem] md:text-[4.38rem] md:leading-[1.1]">235</dd>
           </div>
           <div>
-            <dt>YEARS EXPERIENCE</dt>
-            <dd className="font-atkinson text-[3.25rem]">12+</dd>
+            <dt className="md:text-[1.13rem]">YEARS EXPERIENCE</dt>
+            <dd className="font-atkinson text-[3.25rem] md:text-[4.38rem] md:leading-[1.1]">12+</dd>
           </div>
           <div>
-            <dt>CAR TYPES</dt>
-            <dd className="font-atkinson text-[3.25rem]">18</dd>
+            <dt className="md:text-[1.13rem]">CAR TYPES</dt>
+            <dd className="font-atkinson text-[3.25rem] md:text-[4.38rem] md:leading-[1.1]">18</dd>
           </div>
         </dl>
       </div>
