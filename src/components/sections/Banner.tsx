@@ -1,9 +1,10 @@
 import ClipButton from '@components/atoms/buttons/ClipButton';
 import banner from '@assets/images/banner.jpg';
+import minicar from '@assets/images/mini-car.png';
 
 const Banner = () => {
   return (
-    <section className="flex flex-col gap-[3.75rem]">
+    <section className="flex flex-col gap-[3.75rem] bg-[#F2F4F9] pt-[9.25rem]">
       <div className="px-[2rem] flex flex-col gap-[6.25rem]">
         <div className="flex flex-col gap-[3.75rem]">
           <div className="text-center flex flex-col gap-[1rem]">
@@ -34,7 +35,18 @@ const Banner = () => {
       <div>
         <div className="h-[32.50rem] relative">
           <img src={banner} alt="banner" className="h-full object-cover object-bottom-left" />
-          <div className="absolute bottom-0 right-0 w-[19.44rem] h-[8.69rem] bg-[#020920]" />
+          <div className="absolute bottom-0 right-0 w-[19.44rem] h-[8.69rem] bg-[#020920] px-[2rem_0] py-[2rem] top-left-clip">
+            <div className="absolute w-[11.63rem]">
+              <p className="font-atkinson text-[1.13rem] text-white leading-[1.31]">
+                GET <span className="text-[#FA1D1D] text-[1.25rem]">10%</span> OFF FOR FAMILY CAR
+                <br />
+                TYPE
+              </p>
+            </div>
+            <div className="w-[10.13rem] h-[7.13rem] overflow-visible absolute right-0">
+              <img src={minicar} alt="minicar" className="h-full object-cover object-left" />
+            </div>
+          </div>
         </div>
         <dl
           className="
@@ -60,11 +72,11 @@ const Banner = () => {
           </div>
           <div>
             <dt>YEARS EXPERIENCE</dt>
-            <dd className="font-atkinson text-[3.25rem]">240</dd>
+            <dd className="font-atkinson text-[3.25rem]">12+</dd>
           </div>
           <div>
             <dt>CAR TYPES</dt>
-            <dd className="font-atkinson text-[3.25rem]">180</dd>
+            <dd className="font-atkinson text-[3.25rem]">18</dd>
           </div>
         </dl>
       </div>
