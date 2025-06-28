@@ -6,10 +6,10 @@ const ClipButton = ({ children, className, ...props }: ButtonProps) => {
       className={`
       ${className}
     bg-[#FF9D29]
-    text-white
+      text-white
       font-bold
-      py-[0.94rem]
-      px-[2rem]
+      py-[0.94em]
+      px-[2em]
       clip-custom
       flex
       items-center

@@ -4,53 +4,68 @@ import minicar from '@assets/images/mini-car.png';
 
 const Banner = () => {
   return (
-    <section className="flex flex-col gap-[3.75rem] bg-[#F2F4F9] pt-[9.25rem]">
-      <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem]">
-        <div className="flex flex-col gap-[3.75rem]">
-          <div className="text-center flex flex-col gap-[1rem]">
-            <p className="text-[1.38rem] text-[#FA1D1D] leading-[1.5] tracking-[0.16em]">PLAN YOUR TRIP NOW</p>
-            <h2 className="font-bold text-[#011222] text-[3.25rem] leading-[1.15] font-atkinson">
-              EXPLORE THE WORLD WITH US
-            </h2>
+    <section className="flex flex-col bg-[#F2F4F9] pt-[9.25rem]">
+      <div className="flex flex-col gap-[3.75rem] lg:flex-row lg:gap-0">
+        <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem] lg:w-1/2 lg:px-[7.50rem_0]">
+          <div className="flex flex-col gap-[3.75rem]">
+            <div className="text-center flex flex-col gap-[1rem] lg:text-left">
+              <p className="text-[1.38rem] text-[#FA1D1D] leading-[1.5] tracking-[0.16em]">PLAN YOUR TRIP NOW</p>
+              <h2 className="font-bold text-[#011222] text-[3.25rem] leading-[1.15] font-atkinson lg:text-[6.13rem]">
+                EXPLORE THE WORLD WITH US
+              </h2>
+            </div>
+            <div
+              className="
+              flex
+              items-center
+              gap-[2.50rem]
+              justify-center
+              lg:justify-start
+              text-[1.25rem]
+              lg:text-[1.5rem]
+              "
+            >
+              <ClipButton className="text-[1rem] lg:text-[1.25rem]">Book A Ride</ClipButton>
+              <span className="text-[#5B6B7A]">OR</span>
+              <button className="size-[3.25em] border-1 border-[#FF9D29] rounded-full overflow-hidden">
+                <span className="w-full h-full inline-block bg-[#FF9D29] opacity-20" />
+              </button>
+            </div>
           </div>
-          <div className="flex items-center gap-[2.50rem] justify-center">
-            <ClipButton>Book A Ride</ClipButton>
-            <span className="text-[#5B6B7A] text-[1.25rem]">OR</span>
-            <button className="size-[3.25rem] border-1 border-[#FF9D29] rounded-full overflow-hidden">
-              <span className="w-full h-full inline-block bg-[#FF9D29] opacity-20" />
-            </button>
+
+          <div className="flex flex-col gap-[1.25rem] lg:pr-[7.50rem]">
+            <div className="flex items-center gap-[1.5rem]">
+              <div className="text-[#FA1D1D] font-atkinson text-[1.50rem] leading-[1.21]">WHAT'S NEW</div>
+              <div className="h-[2px] flex-1 border-b-2 border-[#FA1D1D] border-dashed" />
+            </div>
+            <p className="text-[1.13rem] leading-[1.5] text-[#5B6B7A]">
+              Now You Can Rent A Car With The Various Facilities And Conveniences We Provide.
+            </p>
           </div>
         </div>
 
-        <div className="flex flex-col gap-[1.25rem]">
-          <div className="flex items-center gap-[1.5rem]">
-            <div className="text-[#FA1D1D] font-atkinson text-[1.50rem] leading-[1.21]">WHAT'S NEW</div>
-            <div className="h-[2px] flex-1 border-b-2 border-[#FA1D1D] border-dashed" />
-          </div>
-          <p className="text-[1.13rem] leading-[1.5] text-[#5B6B7A]">
-            Now You Can Rent A Car With The Various Facilities And Conveniences We Provide.
-          </p>
+        <div className="h-[32.50rem] lg:h-[52.38rem] lg:w-1/2 relative">
+          <img src={banner} alt="banner" className="w-full h-full object-cover object-bottom-left" />
         </div>
       </div>
-      <div>
-        <div className="h-[32.50rem] relative">
-          <img src={banner} alt="banner" className="h-full object-cover object-bottom-left" />
-          <div className="absolute bottom-0 right-0 w-[19.44rem] h-[8.69rem] bg-[#020920] px-[2rem_0] py-[2rem] top-left-clip">
-            <div className="absolute w-[11.63rem]">
-              <p className="font-atkinson text-[1.13rem] text-white leading-[1.31]">
-                GET <span className="text-[#FA1D1D] text-[1.25rem]">10%</span> OFF FOR FAMILY CAR
-                <br />
-                TYPE
-              </p>
-            </div>
-            <div className="w-[10.13rem] h-[7.13rem] overflow-visible absolute right-0">
-              <img src={minicar} alt="minicar" className="h-full object-cover object-left" />
-            </div>
+
+      <div className="relative">
+        <div className="absolute bottom-full right-0 w-[19.44rem] h-[8.69rem] bg-[#020920] px-[2rem_0] py-[2rem] top-left-clip">
+          <div className="absolute w-[11.63rem]">
+            <p className="font-atkinson text-[1.13rem] text-white leading-[1.31]">
+              GET <span className="text-[#FA1D1D] text-[1.25rem]">10%</span> OFF FOR FAMILY CAR
+              <br />
+              TYPE
+            </p>
+          </div>
+          <div className="w-[10.13rem] h-[7.13rem] overflow-visible absolute right-0">
+            <img src={minicar} alt="minicar" className="h-full object-cover object-left" />
           </div>
         </div>
         <dl
           className="
           h-[23.25rem]
+          lg:h-[14.81rem]
           bg-[#020920]
           px-[2rem]
           py-[3.75rem]
@@ -62,9 +77,14 @@ const Banner = () => {
           text-center
           md:gap-[3.75rem_9.00rem]
           md:px-[9rem]
+          lg:flex
+          lg:gap-0
+          lg:justify-between
+          lg:items-center
+          lg:px-[7.44rem]
           "
         >
-          <div className="flex flex-col justify-between">
+          <div>
             <dt className="md:text-[1.13rem]">CAR RENTED</dt>
             <dd className="font-atkinson text-[3.25rem] md:text-[4.38rem] md:leading-[1.1]">240</dd>
           </div>

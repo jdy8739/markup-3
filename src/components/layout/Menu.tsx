@@ -12,6 +12,7 @@ const Menu = ({ isOpen }: { isOpen: boolean }) => {
       className={`
         bg-[#F2F4F9]
         p-[2rem]
+        md:px-[4rem]
         h-[calc(100dvh-6.25rem)]
         w-[100dvw]
         fixed
@@ -54,7 +55,7 @@ const Menu = ({ isOpen }: { isOpen: boolean }) => {
         </ul>
       </div>
       <div>
-        <ClipButton>Contact US</ClipButton>
+        <ClipButton className="w-full justify-center">Contact US</ClipButton>
       </div>
     </aside>
   );

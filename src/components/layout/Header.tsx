@@ -52,7 +52,7 @@ const Header = () => {
           </div>
           <div className="font-atkinson text-[1.88rem] leading-[1.21]">DRIVEWAYS</div>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center lg:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} onKeyDown={onKeyDown} className="focus:outline-none">
             {isMenuOpen ? <img src={close} alt="close-menu" /> : <img src={menu} alt="menu" />}
           </button>
