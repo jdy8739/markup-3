@@ -4,8 +4,12 @@ import close from '@assets/svgs/close.svg';
 import Menu from '@components/layout/Menu';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
+const MENU_LIST: readonly string[] = ['HOME', 'ABOUT US', 'VEHICLES', 'FEATURES'];
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const [chosenMenu, setChosenMenu] = useState('');
 
   const timeoutRef = useRef<number>(null);
 
@@ -45,12 +49,47 @@ const Header = () => {
 
   return (
     <header className="fixed z-1 w-full bg-[#F2F4F9]">
-      <nav className="flex justify-between p-[2rem] md:px-[4rem]">
+      <nav className="flex justify-between items-center p-[2rem] md:px-[4rem] lg:px-[7.50rem]">
         <div className="flex items-center gap-[0.75rem]">
           <div>
             <img src={logo} alt="logo" />
           </div>
           <div className="font-atkinson text-[1.88rem] leading-[1.21]">DRIVEWAYS</div>
+        </div>
+        <div className="hidden lg:block">
+          <ul className="flex leading-[1.21] gap-[3rem]">
+            {MENU_LIST.map((el) => (
+              <li key={el} className={`relative ${chosenMenu === el ? 'text-[#FF9D29]' : 'text-[#BDBDBD]'}`}>
+                <button onClick={() => setChosenMenu(el)}>{el}</button>
+                {chosenMenu === el && (
+                  <div
+                    className="
+                    absolute
+                    bg-white
+                    p-[2rem]
+                    mt-[1rem]
+                    shadow-lg shadow-gray-300-500/50
+                    "
+                  >
+                    <ul
+                      className="
+                      font-semibold
+                      leading-[1.21]
+                      flex flex-col gap-[2rem]
+                      w-max
+                      "
+                    >
+                      <li>HOME PAGE 01</li>
+                      <li className="text-[#BDBDBD]">HOME PAGE 02</li>
+                    </ul>
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="hidden lg:block">
+          <button className="font-bold text-[1.25rem] text-[#BDBDBD]">Contact Us</button>
         </div>
         <div className="flex items-center lg:hidden">
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} onKeyDown={onKeyDown} className="focus:outline-none">

@@ -4,9 +4,9 @@ import minicar from '@assets/images/mini-car.png';
 
 const Banner = () => {
   return (
-    <section className="flex flex-col bg-[#F2F4F9] pt-[9.25rem]">
+    <section className="flex flex-col bg-[#F2F4F9] pt-[9.25rem] lg:pt-[6.5rem]">
       <div className="flex flex-col gap-[3.75rem] lg:flex-row lg:gap-0">
-        <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem] lg:w-1/2 lg:px-[7.50rem_0]">
+        <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem] lg:w-1/2 lg:px-[7.50rem_0] lg:justify-center">
           <div className="flex flex-col gap-[3.75rem]">
             <div className="text-center flex flex-col gap-[1rem] lg:text-left">
               <p className="text-[1.38rem] text-[#FA1D1D] leading-[1.5] tracking-[0.16em]">PLAN YOUR TRIP NOW</p>
