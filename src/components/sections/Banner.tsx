@@ -5,7 +5,26 @@ import minicar from '@assets/images/mini-car.png';
 const Banner = () => {
   return (
     <section className="flex flex-col bg-[#F2F4F9] pt-[9.25rem] lg:pt-[6.5rem]">
-      <div className="flex flex-col gap-[3.75rem] lg:flex-row lg:gap-0">
+      <div className="absolute h-dvh w-full lg:w-1/2 overflow-x-hidden">
+        <div
+          className="
+          absolute left-[-10rem] top-[12rem]
+          lg:top-[25rem]
+          size-[30rem]
+          bg-[radial-gradient(15rem_at_center,_#4C6ACA,_rgba(76,106,202,0))]
+          opacity-20"
+        />
+        <div
+          className="
+          absolute right-[-15rem] top-[-1.5rem]
+          lg:top-[5rem]
+          size-[30rem]
+          bg-[radial-gradient(15rem_at_center,_#4C6ACA,_rgba(76,106,202,0))]
+          opacity-20"
+        />
+      </div>
+
+      <div className="flex flex-col gap-[3.75rem] lg:flex-row lg:gap-0 z-1">
         <div className="px-[2rem] flex flex-col gap-[6.25rem] md:px-[4rem] lg:w-1/2 lg:px-[7.50rem_0] lg:justify-center">
           <div className="flex flex-col gap-[3.75rem]">
             <div className="text-center flex flex-col gap-[1rem] lg:text-left">
