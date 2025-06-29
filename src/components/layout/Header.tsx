@@ -47,8 +47,26 @@ const Header = () => {
     }
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const header = document.querySelector('header')!;
+
+    const outsideClickCallback = (e: MouseEvent) => {
+      const target = e.target as Node;
+
+      if (!header.contains(target)) {
+        setChosenMenu('');
+      }
+    };
+
+    window.addEventListener('click', outsideClickCallback);
+
+    return () => {
+      window.removeEventListener('click', outsideClickCallback);
+    };
+  }, []);
+
   return (
-    <header className="fixed z-1 w-full bg-[#F2F4F9]">
+    <header className="fixed z-2 w-full bg-[#F2F4F9]">
       <nav className="flex justify-between items-center p-[2rem] md:px-[4rem] lg:px-[7.50rem]">
         <div className="flex items-center gap-[0.75rem]">
           <div>
